@@ -7,6 +7,7 @@
 #include <string.h>
 #include <poll.h>
 
+/**/
 static char gpio_path[100];
 
 static int gpio_config(const char *attr, const char *val)
@@ -14,7 +15,7 @@ static int gpio_config(const char *attr, const char *val)
     char file_path[100];
     int len;
     int fd;
-    
+
     sprintf(file_path, "%s/%s",gpio_path,attr);
     if(0>(fd=open(file_path,O_WRONLY)))
     {
